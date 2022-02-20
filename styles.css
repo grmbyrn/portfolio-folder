@@ -93,6 +93,7 @@ h2,
 h3 {
     line-height: 1;
     margin: 0;
+    color: white;
 }
 
 h1 { font-size: var(--fs-h1) }
@@ -133,10 +134,36 @@ h3 { font-size: var(--fs-h3) }
 
 /* header */
 
+/* header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-image: url(./img/scott-webb-UjupleczBOY-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
+    position: relative; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header::before {    
+    content: "";
+    background-image: url(./img/lionello-delpiccolo-qEswHvOmi1c-unsplash.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.999;
 }
 
 .logo {
@@ -210,8 +237,6 @@ header {
     opacity: 0;
 }
 
-
-
 .hamburger {
     display: block;
     position: relative;
@@ -222,7 +247,7 @@ header {
 .hamburger::after {
     background: var(--clr-accent);
     width: 2em;
-    height: 3px;
+    height: 4px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
@@ -238,6 +263,19 @@ header {
 
 .hamburger::before { top: 6px; }
 .hamburger::after { bottom: 6px; }
+
+.socials {
+    background: var(--clr-dark);
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+}
+
+.socials a { 
+    color: inherit;
+    text-decoration: none;
+}
 
 
 /*  Intro section  */
@@ -285,14 +323,12 @@ header {
 }
 
 
-
 /*  My services section  */
 
 .my-services {
     background-color: var(--clr-dark);
-    background-image: url(../img/services-bg.jpg);
+    background-image: url(./img/avi-richards-Z3ownETsdNQ-unsplash.jpg);
     background-size: cover;
-    /* background-blend-mode: multiply; */
     color: var(--clr-light);
     text-align: center;
 }
@@ -335,9 +371,19 @@ header {
 }
 
 
-.about-me {
+/* .about-me {
     max-width: 1000px;
     margin: 0 auto;
+    background-image: url(./img/scott-webb-UjupleczBOY-unsplash.jpg);
+    background-size: cover;
+    border: 1px solid red;
+} */
+
+.about-me {
+    background-color: var(--clr-dark);
+    background-image: url(./img/scott-webb-UjupleczBOY-unsplash.jpg);
+    background-size: cover;
+    text-align: center; 
 }
 
 .about-me__img {
@@ -381,17 +427,17 @@ header {
 .my-work {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    text-align: center;    
+    text-align: center;  
 }
 
 .portfolio {
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
-    overflow: hidden;
+    background: var(--clr-dark);
 }
 
 .portfolio__img {
@@ -407,8 +453,21 @@ header {
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
-    transform: scale(1.2);
+    transform: scale(1.05);
     opacity: .5;
+}
+
+.links{
+    margin-block: 20px;
+}
+
+.links > a {
+    margin-inline: 10px;
+}
+
+.links > a:hover,
+.links > a:focus {
+    color: var(--clr-light);
 }
 
 
@@ -420,7 +479,6 @@ header {
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
-
 }
 
 .footer a { 
