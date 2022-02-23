@@ -15,7 +15,7 @@
     
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-accent: #0099ff;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -84,6 +84,7 @@ strong { font-weight: var(--fw-bold) }
 
 .btn:hover {
     transform: scale(1.1);
+    color: var(--clr-light);
 }
 
 /* Typography */
@@ -134,15 +135,6 @@ h3 { font-size: var(--fs-h3) }
 
 /* header */
 
-/* header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    background-image: url(./img/scott-webb-UjupleczBOY-unsplash.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -156,7 +148,7 @@ header {
 
 header::before {    
     content: "";
-    background-image: url(./img/lionello-delpiccolo-qEswHvOmi1c-unsplash.jpg);
+    background-image: url(./img/water-bg.jpg);
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -245,13 +237,12 @@ header::before {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-accent);
+    background: var(--clr-light);
     width: 2em;
-    height: 4px;
+    height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
-
 
 .hamburger::before,
 .hamburger::after {
@@ -322,19 +313,18 @@ header::before {
     }
 }
 
-
 /*  My services section  */
 
 .my-services {
     background-color: var(--clr-dark);
-    background-image: url(./img/avi-richards-Z3ownETsdNQ-unsplash.jpg);
+    background-image: url(./img/mountains-bg.jpg);
     background-size: cover;
+    opacity: 0.999;
     color: var(--clr-light);
     text-align: center;
 }
 
 .section__title--services {
-    color: var(--clr-accent);
     position: relative;
 }
 
@@ -344,8 +334,8 @@ header::before {
     width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
-    opacity: 0.25;
+    background: var(--clr-dark);
+    opacity: 0.9;
 }
 
 .services {
@@ -370,24 +360,37 @@ header::before {
     }
 }
 
-
-/* .about-me {
-    max-width: 1000px;
-    margin: 0 auto;
-    background-image: url(./img/scott-webb-UjupleczBOY-unsplash.jpg);
-    background-size: cover;
-    border: 1px solid red;
-} */
-
 .about-me {
     background-color: var(--clr-dark);
-    background-image: url(./img/scott-webb-UjupleczBOY-unsplash.jpg);
+    background-image: url(./img/road.jpg);
     background-size: cover;
+    opacity: 0.999;
     text-align: center; 
 }
 
 .about-me__img {
     box-shadow: var(--bs);
+    margin: 0 auto;
+    height: 35rem;
+}
+
+.about-me__body{
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-inline: 2rem;
+    text-align: left;
+}
+
+.about-me__body > p {
+    color: var(--clr-light);
+}
+
+.section__title--about{
+    color: var(--clr-light);
+}
+
+.section__subtitle{
+    color: var(--clr-light);
 }
 
 @media (min-width: 600px) {
@@ -399,6 +402,7 @@ header::before {
             "subtitle img"
             "text img";
         grid-column-gap: 2em;
+        padding-inline: 2em;
     }
     
     .section__title--about {
@@ -419,6 +423,15 @@ header::before {
         grid-area: img;
         position: relative;
         z-index: 2;
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
+@media(min-width: 1025px){
+    .about-me__body{
+        display: flex;
+        gap: 3rem;
     }
 }
 
@@ -440,10 +453,18 @@ header::before {
     background: var(--clr-dark);
 }
 
+.portfolio__item__desc{
+    font-size: 1rem;
+    padding-inline: 1rem;
+}
+
 .portfolio__img {
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
+    height: 12.5rem;
+    margin: 0 auto;
+    opacity: .5;
 }
 
 .portfolio__item:focus {
@@ -454,7 +475,7 @@ header::before {
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
     transform: scale(1.05);
-    opacity: .5;
+    opacity: 1;
 }
 
 .links{
@@ -468,6 +489,7 @@ header::before {
 .links > a:hover,
 .links > a:focus {
     color: var(--clr-light);
+    cursor: pointer;
 }
 
 
