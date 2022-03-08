@@ -165,16 +165,6 @@ header {
     background-size: cover;
 }
 
-/* header::before {   
-    background: linear-gradient(45deg, #2a2a72 0%, #009ffd 74%);
-    content: "";
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.999;
-} */
-
 .logo {
     max-width: 100px;
 }
@@ -300,6 +290,18 @@ header {
     display: inline-block;
 }
 
+@media (max-width: 550px){
+    .contact-btn{
+        position: relative;
+        top: .5rem;
+    }
+
+    .btn{
+        margin: .2em 1.5em;
+        gap: 1rem;
+    }
+}
+
 @media (min-width: 600px) {
     .intro {
         display: grid;
@@ -331,7 +333,7 @@ header {
 
     .contact-btn {
         display: inline-block;
-        padding: .6em 2em;
+        padding: .6em 1.5em;
         background: var(--clr-accent);
         color: var(--clr-dark);
         text-decoration: none;
@@ -440,7 +442,6 @@ header {
 
 .section__title--about{
     color: var(--clr-light);
-    border: red 1px solid;
     text-align: center;
 }
 
@@ -472,7 +473,6 @@ header {
         width: calc(100% + 2em);
         padding-left: 1em;
         padding-right: calc(200px + 4em);
-        border: red 1px solid;
         text-align: center;
     }
     
